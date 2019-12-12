@@ -196,13 +196,13 @@ data_jenna = {
 data_amy = {
 	"globalComprehension": "green",
 	"index": 6,
-	"videoRow": 2
-	"videoOrder": []
-	"subjectGroup": 1
-	"curVideo": 1
-	"curWorld": 10
-	"feedbackReasoning": "mostly guessed — the texture was very hard to tell but the massiveness was much easier. I misunderstood what repel vs. dont interact meant for the first few videos 😞"
-	"feedbackDifficulty": "7"
+	"videoRow": 2,
+	"videoOrder": [],
+	"subjectGroup": 1,
+	"curVideo": 1,
+	"curWorld": 10,
+	"feedbackReasoning": "mostly guessed — the texture was very hard to tell but the massiveness was much easier. I misunderstood what repel vs. dont interact meant for the first few videos 😞",
+	"feedbackDifficulty": "7",
 	"data": [{
 		"index": 1,
 		"curVideo": 4,
@@ -272,10 +272,10 @@ data_amy = {
 		"interact_red_yellow": "none",
 		"global": "up"
 		},{
-		"index": 5
-		"curVideo": 1
-		"curWorld": 10
-		"weight_blue": "2"
+		"index": 5,
+		"curVideo": 1,
+		"curWorld": 10,
+		"weight_blue": "2",
 		"weight_yellow": "0",
 		"weight_red": "-1",
 		"rough_green": "1",
@@ -358,7 +358,7 @@ data_tiff = {
 		"curWorld": 5,
 		"weight_blue": "0",
 		"weight_yellow": "-1",
-		"weight_red": "0",,
+		"weight_red": "0",
 		"rough_green": "0",
 		"rough_purple": "0",
 		"rough_brown": "-1",
@@ -385,6 +385,37 @@ data_tiff = {
 		"interact_blue_yellow": "none",
 		"interact_blue_red": "-1",
 		"interact_red_yellow": "-1",
-		"global": "down" 
+		"global": "down"
 	}]
 }
+
+data_points = [data_amy, data_tiff, data_jenna, data_kriti]
+
+worlds = {}
+for dp in data_points:
+	for data in dp["data"]:
+		if data["curWorld"] in worlds:
+			worlds[data["curWorld"]].append(data["curVideo"])
+		else:
+			worlds[data["curWorld"]] = [data["curVideo"]]
+
+print(worlds)
+
+# "data": [{
+# 	"index": 1,
+# 	"curVideo": 4,
+# 	"curWorld": 7,
+# 	"weight_blue": "2",
+# 	"weight_yellow": "1",
+# 	"weight_red": "1",
+# 	"rough_green": "-1",
+# 	"rough_purple": "0",
+# 	"rough_brown": "0",
+# 	"interact_blue_blue": "-1",
+# 	"interact_red_red": "none",
+# 	"interact_yellow_yellow": "-1",
+# 	"interact_blue_yellow": "none",
+# 	"interact_blue_red": "repel",
+# 	"interact_red_yellow": "repel",
+# 	"global": "left"
+# 	},{
