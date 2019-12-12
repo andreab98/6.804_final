@@ -17,12 +17,12 @@ class Surface:
 		self.position = (x, y)
 
 
-class Pairwise_force:
+class Pairwise_Force:
 	def __init__(self, object_a, object_b, f_strength):
 		self.f_strength = f_strength
 
 
-class Global_force:
+class Global_Force:
 	def __init__(self, f_strength, f_direction):
 		self.f_strength = f_strength
 		self.f_direction = f_direction
