@@ -1,195 +1,23 @@
-data_1 = {"globalComprehension": "green",
-	"index": 6,
-	"videoRow": 2,
-	"videoOrder": [],
-	"subjectGroup": 0,
-	"curVideo": 6,
-	"curWorld": 9,
-	"feedbackReasoning": "I would watch the video for each question and focus on just that aspect. Generally it was pretty intuitive, but I would base my answers on the speed and angles that the balls were moving.",
-	"feedbackDifficulty": "2",
-	"data": [{
-		"index": 1,
-		"curVideo": 4,
-		"curWorld": 7,
-		"weight_blue": "2",
-		"weight_yellow": "1",
-		"weight_red": "1",
-		"rough_green": "-1",
-		"rough_purple": "0",
-		"rough_brown": "0",
-		"interact_blue_blue": "-1",
-		"interact_red_red": "none",
-		"interact_yellow_yellow": "-1",
-		"interact_blue_yellow": "none",
-		"interact_blue_red": "repel",
-		"interact_red_yellow": "repel",
-		"global": "left"
-		},{
-		"index": 2,
-		"curVideo": 1,
-		"curWorld": 5,
-		"weight_blue": "1",
-		"weight_yellow": "0",
-		"weight_red": "2",
-		"rough_green": "-1",
-		"rough_purple": "1",
-		"rough_brown": "0",
-		"interact_blue_blue": "-1",
-		"interact_red_red": "-1",
-		"interact_yellow_yellow": "none",
-		"interact_blue_yellow": "repel",
-		"interact_blue_red": "attract",
-		"interact_red_yellow": "none",
-		"global": "none"
-		},{
-		"index": 3,
-		"curVideo": 5,
-		"curWorld": 3,
-		"weight_blue": "0",
-		"weight_yellow": "1",
-		"weight_red": "-1",
-		"rough_green": "-1",
-		"rough_purple": "-1",
-		"rough_brown": "1",
-		"interact_blue_blue": "attract",
-		"interact_red_red": "-1",
-		"interact_yellow_yellow": "attract",
-		"interact_blue_yellow": "repel",
-		"interact_blue_red": "-1",
-		"interact_red_yellow": "-1",
-		"global": "none"
-		},{
-		"index": 4,
-		"curVideo": 3,
-		"curWorld": 1,
-		"weight_blue": "1",
-		"weight_yellow": "0",
-		"weight_red": "0",
-		"rough_green": "1",
-		"rough_purple": "1",
-		"rough_brown": "-1",
-		"interact_blue_blue": "-1",
-		"interact_red_red": "repel",
-		"interact_yellow_yellow": "-1",
-		"interact_blue_yellow": "none",
-		"interact_blue_red": "none",
-		"interact_red_yellow": "none",
-		"global": "none"
-		},{
-		"index": 5,
-		"curVideo": 6,
-		"curWorld": 9,
-		"weight_blue": "-1",
-		"weight_yellow": "0",
-		"weight_red": "1",
-		"rough_green": "0",
-		"rough_purple": "-1",
-		"rough_brown": "-1",
-		"interact_blue_blue": "-1",
-		"interact_red_red": "repel",
-		"interact_yellow_yellow": "none",
-		"interact_blue_yellow": "-1",
-		"interact_blue_red": "-1",
-		"interact_red_yellow": "none",
-		"global": "down"
-		}]
-	}
 
-data_2 = {
-	"globalComprehension": "green",
-	"index": 6,
-	"videoRow": 0,
-	"videoOrder": [],
-	"subjectGroup": 0,
-	"curVideo": 5,
-	"curWorld": 5,
-	"feedbackReasoning": "I was able to extract/answer a few questions about the physics of each world, but I needed to replay the video in order to qualify every relationship.",
-	"feedbackDifficulty": "6",
-	"data": [{
-		"index": 1,
-		"curVideo": 3,
-		"curWorld": 3,
-		"weight_blue": "-1",
-		"weight_yellow": "0",
-		"weight_red": "0",
-		"rough_green": "0",
-		"rough_purple": "-1",
-		"rough_brown": "2",
-		"interact_blue_blue": "-1",
-		"interact_red_red": "none",
-		"interact_yellow_yellow": "attract",
-		"interact_blue_yellow": "-1",
-		"interact_blue_red": "-1",
-		"interact_red_yellow": "none",
-		"global": "down"
-		},{
-		"index": 2,
-		"curVideo": 2,
-		"curWorld": 7,
-		"weight_blue": "1",
-		"weight_yellow": "-1",
-		"weight_red": "1",
-		"rough_green": "-1",
-		"rough_purple": "0",
-		"rough_brown": "-1",
-		"interact_blue_blue": "attract",
-		"interact_red_red": "repel",
-		"interact_yellow_yellow": "-1",
-		"interact_blue_yellow": "-1",
-		"interact_blue_red": "none",
-		"interact_red_yellow": "-1",
-		"global": "left"
-		},{
-		"index": 3,
-		"curVideo": 1,
-		"curWorld": 1,
-		"weight_blue": "2",
-		"weight_yellow": "0",
-		"weight_red": "0",
-		"rough_green": "2",
-		"rough_purple": "1",
-		"rough_brown": "-1",
-		"interact_blue_blue": "-1",
-		"interact_red_red": "none",
-		"interact_yellow_yellow": "-1",
-		"interact_blue_yellow": "-1",
-		"interact_blue_red": "-1",
-		"interact_red_yellow": "-1",
-		"global": "none"
-		},{
-		"index": 4,
-		"curVideo": 4,
-		"curWorld": 9,
-		"weight_blue": "2",
-		"weight_yellow": "1",
-		"weight_red": "0",
-		"rough_green": "-1",
-		"rough_purple": "-1",
-		"rough_brown": "0",
-		"interact_blue_blue": "-1",
-		"interact_red_red": "-1",
-		"interact_yellow_yellow": "-1",
-		"interact_blue_yellow": "-1",
-		"interact_blue_red": "attract",
-		"interact_red_yellow": "-1",
-		"global": "down"
-		},{
-		"index": 5,
-		"curVideo": 5,
-		"curWorld": 5,
-		"weight_blue": "1",
-		"weight_yellow": "-1",
-		"weight_red": "2",
-		"rough_green": "2",
-		"rough_purple": "1",
-		"rough_brown": "-1",
-		"interact_blue_blue": "-1",
-		"interact_red_red": "repel",
-		"interact_yellow_yellow": "-1",
-		"interact_blue_yellow": "-1",
-		"interact_blue_red": "attract",
-		"interact_red_yellow": "-1",
-		"global": "none"
-		}]
-	}
+class puck:
+	def __init__(self,mass,friction):
+		self.mass = mass
+		self.friction = friction
+
+
+class surface:
+	def __init__(self, mass, friction):
+		self.mass = mass
+		self.friction = friction
+
+
+class pairwise:
+	def __init__(self, f_strength):
+		self.f_strength = f_strength
+
+
+class global_force:
+	def __init__(self,f_strength,f_direction):
+		self.f_strength = f_strength
+		self.f_direction = f_direction
 
