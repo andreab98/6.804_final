@@ -1,18 +1,20 @@
+import data_structures as struct
+
 # WORLD	6
 
-p1 = puck('blue', 'medium', 0, 0, 0, 0)
-p2 = puck('yellow', 'heavy', 0, 0, 0, 0)
-p3 = puck('red', 'light', 0, 0, 0, 0)
-s1 = surface('green', 'smooth', width, height, 0, 0)
-s2 = surface('purple', 'weak', width, height, 0, 0)
-s3 = surface('brown', 'strong', width, height, 0, 0)
+p1 = struct.puck('blue', 'medium', 0, 0, 0, 0)
+p2 = struct.puck('yellow', 'heavy', 0, 0, 0, 0)
+p3 = struct.puck('red', 'light', 0, 0, 0, 0)
+s1 = struct.surface('green', 'smooth', width, height, 0, 0)
+s2 = struct.surface('purple', 'weak', width, height, 0, 0)
+s3 = struct.surface('brown', 'strong', width, height, 0, 0)
 
-f1 = pairwise_force(p1, p1, f_strength)
-f2 = pairwise_force(p1, p2, f_strength)
+f1 = struct.pairwise_force(p1, p1, f_strength)
+f2 = struct.pairwise_force(p1, p2, f_strength)
 
 objects_6 = set(p1, p2, p3, s1, s2, s3)
 forces_6 = set(f1, f2)
-world_6 = world(objects_6, forces_6)
+world_6 = struct.world(objects_6, forces_6)
 
 # Blue mass: Medium
 # Yellow mass: Heavy
