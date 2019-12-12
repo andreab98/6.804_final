@@ -1,5 +1,5 @@
 # WORLD	6
-objects_6 = set()
+objects_6 = set(object())
 
 forces_6 = set()
 world_6 = world(objects_6, forces_6)
