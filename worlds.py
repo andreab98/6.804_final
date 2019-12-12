@@ -1,5 +1,5 @@
 # WORLD	6
-objects_6 = set(object())
+objects_6 = set(object('medium', friction, color, x, y, v_x, v_y))
 
 forces_6 = set()
 world_6 = world(objects_6, forces_6)
@@ -23,6 +23,7 @@ Purple	patch:	Weak
 Brown	patch:	Strong
 Pairwise forces:	Blue	attracts	Blue,	Yellow	attracts	Yellow
 Global	forces:	West
+
 World	8
 Blue	mass:	Heavy
 Yellow	mass:	Light
@@ -32,6 +33,7 @@ Purple	patch:	Strong
 Brown patch:	Smooth
 Pairwise forces:	Yellow	attracts	Yellow,	Red	attracts	Red,	Red	and	Yellow	repel
 Global	forces:	East
+
 World	9
 Blue	mass:	Light
 Yellow	mass:	Medium
