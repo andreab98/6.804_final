@@ -1,7 +1,10 @@
 # WORLD	6
-objects_6 = set(object('medium', friction, color, x, y, v_x, v_y))
+objects_6 = set(object('blue', 'medium', 0, 0, 0, 0), 
+				object('yellow', 'heavy', 0, 0, 0, 0), 
+				object('red', 'light', 0, 0, 0, 0))
 
 forces_6 = set()
+
 world_6 = world(objects_6, forces_6)
 
 

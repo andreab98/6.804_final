@@ -1,17 +1,17 @@
 
 class Puck:
-	def __init__(self, mass, color, x, y, v_x, v_y):
-		self.mass = mass
+	def __init__(self, color, mass, x, y, v_x, v_y):
 		self.color = None
+		self.mass = mass
 		self.radius = 5
 		self.position = (x, y)
 		self.velocity = (v_x, v_y)
 
 
 class Surface:
-	def __init__(self, friction, color, width, height, x, y):
-		self.friction = friction
+	def __init__(self, color, friction, width, height, x, y):
 		self.color = None
+		self.friction = friction
 		self.width = width
 		self.height = height
 		self.position = (x, y)
