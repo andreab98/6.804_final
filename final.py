@@ -1,5 +1,5 @@
 
-class puck:
+class Puck:
 	def __init__(self, mass, friction, diameter, x, y, v_x, v_y):
 		self.mass = mass
 		self.friction = friction
@@ -8,7 +8,7 @@ class puck:
 		self.velocity = (v_x, v_y)
 
 
-class surface:
+class Surface:
 	def __init__(self, mass, friction, length, x, y):
 		self.mass = mass
 		self.friction = friction
@@ -16,16 +16,25 @@ class surface:
 		self.position = (x, y)
 
 
-class pairwise_force:
+class Pairwise_force:
 	def __init__(self, f_strength):
 		self.f_strength = f_strength
 
 
-class global_force:
+class Global_force:
 	def __init__(self, f_strength, f_direction):
 		self.f_strength = f_strength
 		self.f_direction = f_direction
 
 
-class scenario:
-	def __init__():
+class World:
+	def __init__(objects, forces):
+		self.objects = objects
+		self.forces = forces
+
+
+class Scenario(World):
+	def init_conditions(objects, conditions):
+		for o in objects:
+			o.x, o.y, o.v_x, o.v_y = conditions[o]
+		return objects
