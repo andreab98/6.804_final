@@ -1,4 +1,4 @@
-data_1 = {"globalComprehension": "green",
+data_kriti = {"globalComprehension": "green",
 	"index": 6,
 	"videoRow": 2,
 	"videoOrder": [],
@@ -95,7 +95,7 @@ data_1 = {"globalComprehension": "green",
 		}]
 	}
 
-data_2 = {
+data_jenna = {
 	"globalComprehension": "green",
 	"index": 6,
 	"videoRow": 0,
