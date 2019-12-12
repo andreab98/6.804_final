@@ -400,22 +400,3 @@ for dp in data_points:
 			worlds[data["curWorld"]] = [data["curVideo"]]
 
 print(worlds)
-
-# "data": [{
-# 	"index": 1,
-# 	"curVideo": 4,
-# 	"curWorld": 7,
-# 	"weight_blue": "2",
-# 	"weight_yellow": "1",
-# 	"weight_red": "1",
-# 	"rough_green": "-1",
-# 	"rough_purple": "0",
-# 	"rough_brown": "0",
-# 	"interact_blue_blue": "-1",
-# 	"interact_red_red": "none",
-# 	"interact_yellow_yellow": "-1",
-# 	"interact_blue_yellow": "none",
-# 	"interact_blue_red": "repel",
-# 	"interact_red_yellow": "repel",
-# 	"global": "left"
-# 	},{
