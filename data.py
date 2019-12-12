@@ -194,197 +194,197 @@ data_2 = {
 	}
 
 data_amy = {
-"globalComprehension": "green"
-"index": 6
-"videoRow": 2
-"videoOrder": []
-"subjectGroup": 1
-"curVideo": 1
-"curWorld": 10
-"feedbackReasoning": "mostly guessed — the texture was very hard to tell but the massiveness was much easier. I misunderstood what repel vs. dont interact meant for the first few videos 😞"
-"feedbackDifficulty": "7"
-"data": [{
-"index": 1
-"curVideo": 4
-"curWorld": 2
-"weight_blue": "0"
-"weight_yellow": "1"
-"weight_red": "2"
-"rough_green": "-1"
-"rough_purple": "-1"
-"rough_brown": "0"
-"interact_blue_blue": "repel"
-"interact_red_red": "-1"
-"interact_yellow_yellow": "-1"
-"interact_blue_yellow": "repel"
-"interact_blue_red": "-1"
-"interact_red_yellow": "-1"
-"global": "right"
-},{
-"index": 2
-"curVideo": 3
-"curWorld": 6
-"weight_blue": "1"
-"weight_yellow": "-1"
-"weight_red": "1"
-"rough_green": "0"
-"rough_purple": "0"
-"rough_brown": "1"
-"interact_blue_blue": "-1"
-"interact_red_red": "repel"
-"interact_yellow_yellow": "-1"
-"interact_blue_yellow": "-1"
-"interact_blue_red": "repel"
-"interact_red_yellow": "-1"
-"global": "none"
-},{
-"index": 3
-"curVideo": 6
-"curWorld": 4
-"weight_blue": "2"
-"weight_yellow": "0"
-"weight_red": "0"
-"rough_green": "-1"
-"rough_purple": "0"
-"rough_brown": "-1"
-"interact_blue_blue": "-1"
-"interact_red_red": "repel"
-"interact_yellow_yellow": "-1"
-"interact_blue_yellow": "none"
-"interact_blue_red": "none"
-"interact_red_yellow": "none"
-"global": "up"
-},{
-"index": 4
-"curVideo": 5
-"curWorld": 8
-"weight_blue": "2"
-"weight_yellow": "0"
-"weight_red": "0"
-"rough_green": "-1"
-"rough_purple": "-1"
-"rough_brown": "0"
-"interact_blue_blue": "-1"
-"interact_red_red": "-1"
-"interact_yellow_yellow": "attract"
-"interact_blue_yellow": "none"
-"interact_blue_red": "repel"
-"interact_red_yellow": "none"
-"global": "up"
-},{
-"index": 5
-"curVideo": 1
-"curWorld": 10
-"weight_blue": "2"
-"weight_yellow": "0"
-"weight_red": "-1"
-"rough_green": "1"
-"rough_purple": "0"
-"rough_brown": "-1"
-"interact_blue_blue": "-1"
-"interact_red_red": "-1"
-"interact_yellow_yellow": "attract"
-"interact_blue_yellow": "attract"
-"interact_blue_red": "-1"
-"interact_red_yellow": "-1"
-"global": "up"
-}]
+	"globalComprehension": "green",
+	"index": 6,
+	"videoRow": 2
+	"videoOrder": []
+	"subjectGroup": 1
+	"curVideo": 1
+	"curWorld": 10
+	"feedbackReasoning": "mostly guessed — the texture was very hard to tell but the massiveness was much easier. I misunderstood what repel vs. dont interact meant for the first few videos 😞"
+	"feedbackDifficulty": "7"
+	"data": [{
+		"index": 1,
+		"curVideo": 4,
+		"curWorld": 2,
+		"weight_blue": "0",
+		"weight_yellow": "1",
+		"weight_red": "2",
+		"rough_green": "-1",
+		"rough_purple": "-1",
+		"rough_brown": "0",
+		"interact_blue_blue": "repel",
+		"interact_red_red": "-1",
+		"interact_yellow_yellow": "-1",
+		"interact_blue_yellow": "repel",
+		"interact_blue_red": "-1",
+		"interact_red_yellow": "-1",
+		"global": "right"
+		},{
+		"index": 2,
+		"curVideo": 3,
+		"curWorld": 6,
+		"weight_blue": "1",
+		"weight_yellow": "-1",
+		"weight_red": "1",
+		"rough_green": "0",
+		"rough_purple": "0",
+		"rough_brown": "1",
+		"interact_blue_blue": "-1",
+		"interact_red_red": "repel",
+		"interact_yellow_yellow": "-1",
+		"interact_blue_yellow": "-1",
+		"interact_blue_red": "repel",
+		"interact_red_yellow": "-1",
+		"global": "none",
+		},{
+		"index": 3,
+		"curVideo": 6,
+		"curWorld": 4,
+		"weight_blue": "2",
+		"weight_yellow": "0",
+		"weight_red": "0",
+		"rough_green": "-1",
+		"rough_purple": "0",
+		"rough_brown": "-1",
+		"interact_blue_blue": "-1",
+		"interact_red_red": "repel",
+		"interact_yellow_yellow": "-1",
+		"interact_blue_yellow": "none",
+		"interact_blue_red": "none",
+		"interact_red_yellow": "none",
+		"global": "up"
+		},{
+		"index": 4,
+		"curVideo": 5,
+		"curWorld": 8,
+		"weight_blue": "2",
+		"weight_yellow": "0",
+		"weight_red": "0",
+		"rough_green": "-1",
+		"rough_purple": "-1",
+		"rough_brown": "0",
+		"interact_blue_blue": "-1",
+		"interact_red_red": "-1",
+		"interact_yellow_yellow": "attract",
+		"interact_blue_yellow": "none",
+		"interact_blue_red": "repel",
+		"interact_red_yellow": "none",
+		"global": "up"
+		},{
+		"index": 5
+		"curVideo": 1
+		"curWorld": 10
+		"weight_blue": "2"
+		"weight_yellow": "0",
+		"weight_red": "-1",
+		"rough_green": "1",
+		"rough_purple": "0",
+		"rough_brown": "-1",
+		"interact_blue_blue": "-1",
+		"interact_red_red": "-1",
+		"interact_yellow_yellow": "attract",
+		"interact_blue_yellow": "attract",
+		"interact_blue_red": "-1",
+		"interact_red_yellow": "-1",
+		"global": "up"
+	}]
 }
 
 data_tiff = {
-"globalComprehension": "green"
-"index": 6
-"videoRow": 1
-"videoOrder": []
-"subjectGroup": 0
-"curVideo": 5
-"curWorld": 9
-"feedbackReasoning": "by examining the speed and directions at which the balls move and how they interact with each other and their environment"
-"feedbackDifficulty": "2"
-"data": [{
-"index": 1
-"curVideo": 2
-"curWorld": 1
-"weight_blue": "-1"
-"weight_yellow": "0"
-"weight_red": "0"
-"rough_green": "2"
-"rough_purple": "0"
-"rough_brown": "-1"
-"interact_blue_blue": "none"
-"interact_red_red": "repel"
-"interact_yellow_yellow": "-1"
-"interact_blue_yellow": "none"
-"interact_blue_red": "none"
-"interact_red_yellow": "-1"
-"global": "none"
-},{
-"index": 2
-"curVideo": 3
-"curWorld": 7
-"weight_blue": "1"
-"weight_yellow": "1"
-"weight_red": "1"
-"rough_green": "-1"
-"rough_purple": "0"
-"rough_brown": "1"
-"interact_blue_blue": "-1"
-"interact_red_red": "-1"
-"interact_yellow_yellow": "-1"
-"interact_blue_yellow": "none"
-"interact_blue_red": "attract"
-"interact_red_yellow": "attract"
-"global": "left"
-},{
-"index": 3
-"curVideo": 4
-"curWorld": 3
-"weight_blue": "1"
-"weight_yellow": "1"
-"weight_red": "1"
-"rough_green": "0"
-"rough_purple": "0"
-"rough_brown": "-1"
-"interact_blue_blue": "attract"
-"interact_red_red": "-1"
-"interact_yellow_yellow": "-1"
-"interact_blue_yellow": "-1"
-"interact_blue_red": "repel"
-"interact_red_yellow": "none"
-"global": "none"
-},{
-"index": 4
-"curVideo": 6
-"curWorld": 5
-"weight_blue": "0"
-"weight_yellow": "-1"
-"weight_red": "0"
-"rough_green": "0"
-"rough_purple": "0"
-"rough_brown": "-1"
-"interact_blue_blue": "repel"
-"interact_red_red": "repel"
-"interact_yellow_yellow": "-1"
-"interact_blue_yellow": "-1"
-"interact_blue_red": "attract"
-"interact_red_yellow": "-1"
-"global": "none"
-},{
-"index": 5
-"curVideo": 5
-"curWorld": 9
-"weight_blue": "0"
-"weight_yellow": "0"
-"weight_red": "-1"
-"rough_green": "-1"
-"rough_purple": "0"
-"rough_brown": "1"
-"interact_blue_blue": "none"
-"interact_red_red": "-1"
-"interact_yellow_yellow": "none"
-"interact_blue_yellow": "none"
-"interact_blue_red": "-1"
-"interact_red_yellow": "-1"
-"global": "down"
-}]
+	"globalComprehension": "green",
+	"index": 6,
+	"videoRow": 1,
+	"videoOrder": [],
+	"subjectGroup": 0,
+	"curVideo": 5,
+	"curWorld": 9,
+	"feedbackReasoning": "by examining the speed and directions at which the balls move and how they interact with each other and their environment",
+	"feedbackDifficulty": "2",
+	"data": [{
+		"index": 1,
+		"curVideo": 2,
+		"curWorld": 1,
+		"weight_blue": "-1",
+		"weight_yellow": "0",
+		"weight_red": "0",
+		"rough_green": "2",
+		"rough_purple": "0",
+		"rough_brown": "-1",
+		"interact_blue_blue": "none",
+		"interact_red_red": "repel",
+		"interact_yellow_yellow": "-1",
+		"interact_blue_yellow": "none",
+		"interact_blue_red": "none",
+		"interact_red_yellow": "-1",
+		"global": "none",
+		},{
+		"index": 2,
+		"curVideo": 3,
+		"curWorld": 7,
+		"weight_blue": "1",
+		"weight_yellow": "1",
+		"weight_red": "1",
+		"rough_green": "-1",
+		"rough_purple": "0",
+		"rough_brown": "1",
+		"interact_blue_blue": "-1",
+		"interact_red_red": "-1",
+		"interact_yellow_yellow": "-1",
+		"interact_blue_yellow": "none",
+		"interact_blue_red": "attract",
+		"interact_red_yellow": "attract",
+		"global": "left"
+		},{
+		"index": 3,
+		"curVideo": 4,
+		"curWorld": 3,
+		"weight_blue": "1",
+		"weight_yellow": "1",
+		"weight_red": "1",
+		"rough_green": "0",
+		"rough_purple": "0",
+		"rough_brown": "-1",
+		"interact_blue_blue": "attract",
+		"interact_red_red": "-1",
+		"interact_yellow_yellow": "-1",
+		"interact_blue_yellow": "-1",
+		"interact_blue_red": "repel",
+		"interact_red_yellow": "none",
+		"global": "none"
+		},{
+		"index": 4,
+		"curVideo": 6,
+		"curWorld": 5,
+		"weight_blue": "0",
+		"weight_yellow": "-1",
+		"weight_red": "0",,
+		"rough_green": "0",
+		"rough_purple": "0",
+		"rough_brown": "-1",
+		"interact_blue_blue": "repel",
+		"interact_red_red": "repel",
+		"interact_yellow_yellow": "-1",
+		"interact_blue_yellow": "-1",
+		"interact_blue_red": "attract",
+		"interact_red_yellow": "-1",
+		"global": "none"
+		},{
+		"index": 5,
+		"curVideo": 5,
+		"curWorld": 9,
+		"weight_blue": "0",
+		"weight_yellow": "0",
+		"weight_red": "-1",
+		"rough_green": "-1",
+		"rough_purple": "0",
+		"rough_brown": "1",
+		"interact_blue_blue": "none",
+		"interact_red_red": "-1",
+		"interact_yellow_yellow": "none",
+		"interact_blue_yellow": "none",
+		"interact_blue_red": "-1",
+		"interact_red_yellow": "-1",
+		"global": "down" 
+	}]
 }
