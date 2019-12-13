@@ -1,9 +1,10 @@
 
 class Puck:
 	def __init__(self, color, mass, size, x, y, v_x, v_y):
-		self.color = None
 		self.mass = mass
+		self.elastic = .9
 		self.size = size
+		self.color = None	
 		self.position = (x, y)
 		self.velocity = (v_x, v_y)
 
