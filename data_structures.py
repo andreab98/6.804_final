@@ -37,7 +37,8 @@ class World:
 
 
 class Scenario(World):
-	def init_conditions(objects, conditions):
-		for o in objects:
-			o.x, o.y, o.v_x, o.v_y = conditions[o]
-		return objects
+	def init_conditions(conditions):
+		for key, val in self.objects.items():
+			val.x, val.y = conditions[key][0]
+			val.v_x, val.v_y = conditions[key][1]
+		return None
