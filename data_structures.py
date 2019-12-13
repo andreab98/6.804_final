@@ -10,12 +10,11 @@ class Puck:
 
 
 class Surface:
-	def __init__(self, color, friction, width, height, x, y):
+	def __init__(self, color, friction, upperleft, lowerright):
 		self.color = None
 		self.friction = friction
-		self.width = width
-		self.height = height
-		self.position = (x, y)
+		self.upperleft = upperleft
+		self.lowerright = lowerright
 
 
 class Pairwise_Force:

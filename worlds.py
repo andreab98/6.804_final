@@ -4,9 +4,9 @@ import data_structures as struct
 b_mass_1 = struct.puck('blue', 3.0, 4e1, 0, 0, 0, 0)
 y_mass_1 = struct.puck('yellow', .33, 4e1, 0, 0, 0, 0)
 r_mass_1 = struct.puck('red', 1.0, 4e1, 0, 0, 0, 0)
-g_patch_1 = struct.surface('green', 'strong', width, height, 0, 0)
-p_patch_1 = struct.surface('purple', 'smooth', width, height, 0, 0)
-b_patch_1 = struct.surface('brown', 'weak', width, height, 0, 0)
+g_patch_1 = struct.surface('green', 20, (0,0), (0,0))
+p_patch_1 = struct.surface('purple', 0, (0,0), (0,0))
+b_patch_1 = struct.surface('brown', -5, (0,0), (0,0))
 
 objects_1 = {'b_mass' : b_mass_1,
 			 'y_mass' : y_mass_1,
