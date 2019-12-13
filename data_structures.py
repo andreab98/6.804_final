@@ -18,8 +18,10 @@ class Surface:
 
 
 class Pairwise_Force:
-	def __init__(self, object_a, object_b, f_strength):
-		self.f_strength = f_strength
+	def __init__(self, object_a, object_b, f_direction):
+		self.object_a = object_a
+		self.object_b = object_b
+		self.f_strength = 5 if (f_direction == 'attract') else -5
 
 
 class Global_Force:
