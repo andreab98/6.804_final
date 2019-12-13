@@ -12,7 +12,6 @@ objects_1 = set(p1, p2, p3, s1, s2, s3)
 forces_1 = set()
 world_1 = struct.world(objects_1, forces_1)
 
-# World	1
 # Blue	mass: Heavy
 # Yellow mass: Light
 # Red mass: Medium
@@ -37,7 +36,6 @@ objects_2 = set(p1, p2, p3, s1, s2, s3)
 forces_2 = set(f1, f2)
 world_2 = struct.world(objects_2, forces_2)
 
-# World	2
 # Blue	mass: Light
 # Yellow mass: Medium
 # Red mass:	Heavy
@@ -63,7 +61,6 @@ objects_3 = set(p1, p2, p3, s1, s2, s3)
 forces_3 = set(f1, f2, f3)
 world_3 = struct.world(objects_3, forces_3)
 
-# World	3
 # Blue	mass: Medium
 # Yellow mass: Heavy
 # Red mass:	Light
@@ -88,7 +85,6 @@ objects_4 = set(p1, p2, p3, s1, s2, s3)
 forces_4 = set(f1, f2)
 world_4 = struct.world(objects_4, forces_4)
 
-# World	4
 # Blue mass: Heavy
 # Yellow mass: Light
 # Red mass: Medium
@@ -114,7 +110,6 @@ objects_5 = set(p1, p2, p3, s1, s2, s3)
 forces_5 = set(f1, f2, f3)
 world_5 = struct.world(objects_5, forces_5)
 
-# World	5
 # Blue mass: Light
 # Yellow mass: Medium
 # Red mass: Heavy
@@ -125,7 +120,6 @@ world_5 = struct.world(objects_5, forces_5)
 # Global forces: None
 
 # WORLD	6
-
 p1 = struct.puck('blue', 'medium', 0, 0, 0, 0)
 p2 = struct.puck('yellow', 'heavy', 0, 0, 0, 0)
 p3 = struct.puck('red', 'light', 0, 0, 0, 0)
@@ -151,43 +145,112 @@ world_6 = struct.world(objects_6, forces_6)
 # Pairwise forces: Blue	attracts Blue, Blue attracts Yellow
 # Global forces:	None
 
+# WORLD 7
+p1 = struct.puck('blue', 'medium', 0, 0, 0, 0)
+p2 = struct.puck('yellow', 'heavy', 0, 0, 0, 0)
+p3 = struct.puck('red', 'light', 0, 0, 0, 0)
+s1 = struct.surface('green', 'smooth', width, height, 0, 0)
+s2 = struct.surface('purple', 'weak', width, height, 0, 0)
+s3 = struct.surface('brown', 'strong', width, height, 0, 0)
 
-# WORLD	7
-# Blue	mass:	Medium
-# Yellow	mass:	Heavy
-# Red	mass:	Light
+f1 = struct.pairwise_force(p1, p1, f_strength)
+f2 = struct.pairwise_force(p2, p2, f_strength)
+f3 = struct.global_force(f_strength, 'west')
+
+objects_7 = set(p1, p2, p3, s1, s2, s3)
+forces_7 = set(f1, f2, f3)
+world_7 = struct.world(objects_7, forces_7)
+
+# Blue mass: Medium
+# Yellow mass:	Heavy
+# Red mass:	Light
+
 # Green	patch:	Smooth
-# Purple	patch:	Weak
+# Purple patch:	Weak
 # Brown	patch:	Strong
+
 # Pairwise forces:	Blue	attracts	Blue,	Yellow	attracts	Yellow
-# Global	forces:	West
+# Global forces:	West
 
-# World	8
-# Blue	mass:	Heavy
-# Yellow	mass:	Light
-# Red	mass:	Medium
+# WORLD 8
+p1 = struct.puck('blue', 'heavy', 0, 0, 0, 0)
+p2 = struct.puck('yellow', 'light', 0, 0, 0, 0)
+p3 = struct.puck('red', 'medium', 0, 0, 0, 0)
+s1 = struct.surface('green', 'weak', width, height, 0, 0)
+s2 = struct.surface('purple', 'strong', width, height, 0, 0)
+s3 = struct.surface('brown', 'smooth', width, height, 0, 0)
+
+f1 = struct.pairwise_force(p2, p2, f_strength)
+f2 = struct.pairwise_force(p3, p3, f_strength)
+f3 = struct.pairwise_force(p3, p2, f_strength)
+f4 = struct.global_force(f_strength, 'east')
+
+objects_8 = set(p1, p2, p3, s1, s2, s3)
+forces_8 = set(f1, f2, f3, f4)
+world_8 = struct.world(objects_8, forces_8)
+
+# Blue	mass: Heavy
+# Yellow mass: Light
+# Red mass:	Medium
+
 # Green	patch:	Weak
-# Purple	patch:	Strong
+# Purple patch:	Strong
 # Brown patch:	Smooth
-# Pairwise forces:	Yellow	attracts	Yellow,	Red	attracts	Red,	Red	and	Yellow	repel
-# Global	forces:	East
 
-# World	9
-# Blue	mass:	Light
-# Yellow	mass:	Medium
-# Red	mass:	Heavy
+# Pairwise forces: Yellow attracts Yellow, Red attracts Red, Red and Yellow	repel
+# Global forces: East
+
+# WORLD 9
+p1 = struct.puck('blue', 'light', 0, 0, 0, 0)
+p2 = struct.puck('yellow', 'medium', 0, 0, 0, 0)
+p3 = struct.puck('red', 'heavy', 0, 0, 0, 0)
+s1 = struct.surface('green', 'weak', width, height, 0, 0)
+s2 = struct.surface('purple', 'strong', width, height, 0, 0)
+s3 = struct.surface('brown', 'smooth', width, height, 0, 0)
+
+f1 = struct.pairwise_force(p1, p1, f_strength)
+f2 = struct.pairwise_force(p3, p3, f_strength)
+f3 = struct.pairwise_force(p3, p1, f_strength)
+f4 = struct.global_force(f_strength, 'south')
+
+objects_9 = set(p1, p2, p3, s1, s2, s3)
+forces_9 = set(f1, f2, f3)
+world_9 = struct.world(objects_9, forces_9)
+
+# Blue	mass: Light
+# Yellow mass: Medium
+# Red mass:	Heavy
+
 # Green	patch:	Weak
-# Purple	patch:	Strong
+# Purple patch:	Strong
 # Brown	patch:	Smooth
-# Pairwise forces:	Blue	repels	Blue,	Red	repels	Red,	Red	and	Blue	attract
-# Global	forces:	South
 
-# World	10
-# Blue	mass:	Heavy
-# Yellow	mass:	Light
-# Red	mass:	Medium
+# Pairwise forces: Blue repels	Blue, Red repels Red, Red and Blue attract
+# Global forces: South
+
+# WORLD 10
+p1 = struct.puck('blue', 'heavy', 0, 0, 0, 0)
+p2 = struct.puck('yellow', 'light', 0, 0, 0, 0)
+p3 = struct.puck('red', 'medium', 0, 0, 0, 0)
+s1 = struct.surface('green', 'strong', width, height, 0, 0)
+s2 = struct.surface('purple', 'smooth', width, height, 0, 0)
+s3 = struct.surface('brown', 'weak', width, height, 0, 0)
+
+f1 = struct.pairwise_force(p2, p2, f_strength)
+f2 = struct.pairwise_force(p2, p3, f_strength)
+f3 = struct.global_force(f_strength, 'north')
+
+objects_10 = set(p1, p2, p3, s1, s2, s3)
+forces_10 = set(f1, f2)
+world_10 = struct.world(objects_10, forces_10)
+
+# Blue mass: Heavy
+# Yellow mass: Light
+# Red mass: Medium
+
 # Green	patch:	Strong
-# Purple	patch:	Smooth
+# Purple patch:	Smooth
 # Brown	patch:	Weak
-# Pairwise forces:	Yellow	attracts	Yellow,	Yellow	attracts	Red
-# Global	forces:	North
+
+# Pairwise forces: Yellow attracts Yellow, Yellow attracts Red
+# Global forces: North
