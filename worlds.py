@@ -1,9 +1,9 @@
 import data_structures as struct
 
 # WORLD	1
-b_mass_1 = struct.puck('blue', 'heavy', 0, 0, 0, 0)
-y_mass_1 = struct.puck('yellow', 'light', 0, 0, 0, 0)
-r_mass_1 = struct.puck('red', 'medium', 0, 0, 0, 0)
+b_mass_1 = struct.puck('blue', 3.0, 4e1, 0, 0, 0, 0)
+y_mass_1 = struct.puck('yellow', .33, 4e1, 0, 0, 0, 0)
+r_mass_1 = struct.puck('red', 1.0, 4e1, 0, 0, 0, 0)
 g_patch_1 = struct.surface('green', 'strong', width, height, 0, 0)
 p_patch_1 = struct.surface('purple', 'smooth', width, height, 0, 0)
 b_patch_1 = struct.surface('brown', 'weak', width, height, 0, 0)
@@ -29,9 +29,9 @@ world_1 = struct.world(objects_1, forces_1)
 # Global forces: None
 
 # WORLD	2
-b_mass_2 = struct.puck('blue', 'light', 0, 0, 0, 0)
-y_mass_2 = struct.puck('yellow', 'medium', 0, 0, 0, 0)
-r_mass_2 = struct.puck('red', 'heavy', 0, 0, 0, 0)
+b_mass_2 = struct.puck('blue', .33, 0, 0, 0, 0)
+y_mass_2 = struct.puck('yellow', 1.0, 4e1, 0, 0, 0, 0)
+r_mass_2 = struct.puck('red', 3.0, 4e1, 0, 0, 0, 0)
 g_patch_2 = struct.surface('green', 'smooth', width, height, 0, 0)
 p_patch_2 = struct.surface('purple', 'weak', width, height, 0, 0)
 b_patch_2 = struct.surface('brown', 'strong', width, height, 0, 0)
@@ -58,9 +58,9 @@ world_2 = struct.world(objects_2, forces_2)
 # Global forces: None
 
 # WORLD	3
-b_mass_3 = struct.puck('blue', 'medium', 0, 0, 0, 0)
-y_mass_3 = struct.puck('yellow', 'heavy', 0, 0, 0, 0)
-r_mass_3 = struct.puck('red', 'light', 0, 0, 0, 0)
+b_mass_3 = struct.puck('blue', 1.0, 0, 0, 0, 0)
+y_mass_3 = struct.puck('yellow', 3.0, 0, 0, 0, 0)
+r_mass_3 = struct.puck('red', .33, 0, 0, 0, 0)
 g_patch_3 = struct.surface('green', 'weak', width, height, 0, 0)
 p_patch_3 = struct.surface('purple', 'strong', width, height, 0, 0)
 b_patch_3 = struct.surface('brown', 'smooth', width, height, 0, 0)
@@ -88,9 +88,9 @@ world_3 = struct.world(objects_3, forces_3)
 # Global forces: None
 
 # WORLD	4
-b_mass_4 = struct.puck('blue', 'heavy', 0, 0, 0, 0)
-y_mass_4 = struct.puck('yellow', 'light', 0, 0, 0, 0)
-r_mass_4 = struct.puck('red', 'medium', 0, 0, 0, 0)
+b_mass_4 = struct.puck('blue', 3.0, 0, 0, 0, 0)
+y_mass_4 = struct.puck('yellow', .33, 0, 0, 0, 0)
+r_mass_4 = struct.puck('red', 1.0, 0, 0, 0, 0)
 g_patch_4 = struct.surface('green', 'strong', width, height, 0, 0)
 p_patch_4 = struct.surface('purple', 'smooth', width, height, 0, 0)
 b_patch_4 = struct.surface('brown', 'weak', width, height, 0, 0)
@@ -117,9 +117,9 @@ world_4 = struct.world(objects_4, forces_4)
 # Global forces: None
 
 # WORLD	5
-b_mass_5 = struct.puck('blue', 'light', 0, 0, 0, 0)
-y_mass_5 = struct.puck('yellow', 'medium', 0, 0, 0, 0)
-r_mass_5 = struct.puck('red', 'heavy', 0, 0, 0, 0)
+b_mass_5 = struct.puck('blue', .33, 0, 0, 0, 0)
+y_mass_5 = struct.puck('yellow', 1.0, 0, 0, 0, 0)
+r_mass_5 = struct.puck('red', 3.0, 0, 0, 0, 0)
 g_patch_5 = struct.surface('green', 'strong', width, height, 0, 0)
 p_patch_5 = struct.surface('purple', 'smooth', width, height, 0, 0)
 b_patch_5 = struct.surface('brown', 'weak', width, height, 0, 0)
@@ -147,9 +147,9 @@ world_5 = struct.world(objects_5, forces_5)
 # Global forces: None
 
 # WORLD	6
-b_mass_6 = struct.puck('blue', 'medium', 0, 0, 0, 0)
-y_mass_6 = struct.puck('yellow', 'heavy', 0, 0, 0, 0)
-r_mass_6 = struct.puck('red', 'light', 0, 0, 0, 0)
+b_mass_6 = struct.puck('blue', 1.0, 0, 0, 0, 0)
+y_mass_6 = struct.puck('yellow', 3.0, 0, 0, 0, 0)
+r_mass_6 = struct.puck('red', .33, 0, 0, 0, 0)
 g_patch_6 = struct.surface('green', 'smooth', width, height, 0, 0)
 p_patch_6 = struct.surface('purple', 'weak', width, height, 0, 0)
 b_patch_6 = struct.surface('brown', 'strong', width, height, 0, 0)
@@ -178,9 +178,9 @@ world_6 = struct.world(objects_6, forces_6)
 # Global forces: None
 
 # WORLD 7
-b_mass_7 = struct.puck('blue', 'medium', 0, 0, 0, 0)
-y_mass_7 = struct.puck('yellow', 'heavy', 0, 0, 0, 0)
-r_mass_7 = struct.puck('red', 'light', 0, 0, 0, 0)
+b_mass_7 = struct.puck('blue', 1.0, 0, 0, 0, 0)
+y_mass_7 = struct.puck('yellow', 3.0, 0, 0, 0, 0)
+r_mass_7 = struct.puck('red', .33, 0, 0, 0, 0)
 g_patch_7 = struct.surface('green', 'smooth', width, height, 0, 0)
 p_patch_7 = struct.surface('purple', 'weak', width, height, 0, 0)
 b_patch_7 = struct.surface('brown', 'strong', width, height, 0, 0)
@@ -210,9 +210,9 @@ world_7 = struct.world(objects_7, forces_7)
 # Global forces: West
 
 # WORLD 8
-b_mass_8 = struct.puck('blue', 'heavy', 0, 0, 0, 0)
-y_mass_8 = struct.puck('yellow', 'light', 0, 0, 0, 0)
-r_mass_8 = struct.puck('red', 'medium', 0, 0, 0, 0)
+b_mass_8 = struct.puck('blue', 3.0, 0, 0, 0, 0)
+y_mass_8 = struct.puck('yellow', .33, 0, 0, 0, 0)
+r_mass_8 = struct.puck('red', 1.0, 0, 0, 0, 0)
 g_patch_8 = struct.surface('green', 'weak', width, height, 0, 0)
 p_patch_8 = struct.surface('purple', 'strong', width, height, 0, 0)
 b_patch_8 = struct.surface('brown', 'smooth', width, height, 0, 0)
@@ -243,9 +243,9 @@ world_8 = struct.world(objects_8, forces_8)
 # Global forces: East
 
 # WORLD 9
-b_mass_9 = struct.puck('blue', 'light', 0, 0, 0, 0)
-y_mass_9 = struct.puck('yellow', 'medium', 0, 0, 0, 0)
-r_mass_9 = struct.puck('red', 'heavy', 0, 0, 0, 0)
+b_mass_9 = struct.puck('blue', .33, 0, 0, 0, 0)
+y_mass_9 = struct.puck('yellow', 1.0, 0, 0, 0, 0)
+r_mass_9 = struct.puck('red', 3.0, 0, 0, 0, 0)
 g_patch_9 = struct.surface('green', 'weak', width, height, 0, 0)
 p_patch_9 = struct.surface('purple', 'strong', width, height, 0, 0)
 b_patch_9 = struct.surface('brown', 'smooth', width, height, 0, 0)
@@ -276,9 +276,9 @@ world_9 = struct.world(objects_9, forces_9)
 # Global forces: South
 
 # WORLD 10
-b_mass_10 = struct.puck('blue', 'heavy', 0, 0, 0, 0)
-y_mass_10 = struct.puck('yellow', 'light', 0, 0, 0, 0)
-r_mass_10 = struct.puck('red', 'medium', 0, 0, 0, 0)
+b_mass_10 = struct.puck('blue', 3.0, 0, 0, 0, 0)
+y_mass_10 = struct.puck('yellow', .33, 0, 0, 0, 0)
+r_mass_10 = struct.puck('red', 1.0, 0, 0, 0, 0)
 g_patch_10 = struct.surface('green', 'strong', width, height, 0, 0)
 p_patch_10 = struct.surface('purple', 'smooth', width, height, 0, 0)
 b_patch_10 = struct.surface('brown', 'weak', width, height, 0, 0)
