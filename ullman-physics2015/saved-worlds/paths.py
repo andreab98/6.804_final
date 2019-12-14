@@ -18,7 +18,7 @@ def path_parser(path_str):
             pass
         else:
             if start:
-                if len(s2)<17:
+                if len(s2)<13:
                     done = False
                     if s2_:
                         s2+=path_str[char]
@@ -27,11 +27,11 @@ def path_parser(path_str):
                             s2_ = True
                         else:
                             s1+=path_str[char]
-                elif len(s2)==17:
+                elif len(s2)==13:
                     done  = True
                     s2_ = False
                 if done:
-                    push((s1,s2), groups, depth)
+                    push((float(s1),float(s2)), groups, depth)
                     s2 = ""
                     s1 = ""
                     start = False
@@ -43,11 +43,10 @@ def path_parser(path_str):
 
     return groups
 
-import world1_path
-
-path_str = world1_path.path_1
-
-g = (path_parser(path_str))
-for j in g[0]:
-    print(j[0])
-    print(j[1])
+#
+# path_str = world1_path.path_1
+# ''
+# g = (path_parser(path_str))
+# for j in g[0]:
+#     print(j[0])
+#     print(j[1])

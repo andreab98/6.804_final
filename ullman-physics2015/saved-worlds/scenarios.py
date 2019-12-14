@@ -1,6 +1,7 @@
 import data_structures as struct
 import glob
 import re
+from paths import path_parser
 
 def create_scenarios(folderpath):
 	'''
@@ -13,8 +14,14 @@ def create_scenarios(folderpath):
 	scenarios = []
 
 	full_paths = glob.glob(folderpath + '/*.txt')
-	paths = [x[73:] for x in full_paths]
+	# print(full_paths)
+	# Hannah:
+	# paths = [x[73:] for x in full_paths]
 
+	# Andrea:
+	paths = [x[79:] for x in full_paths]
+
+	# print(paths)
 	for file in paths:
 		print(file)
 
@@ -77,6 +84,7 @@ def create_scenarios(folderpath):
 
 
 			path = lines[14]
+			observed_path = path_parser(path)[0]
 
 			# print(name)
 			# print(global_forces)
@@ -114,9 +122,21 @@ def create_scenarios(folderpath):
 			for pf in pairwise_forces_list:
 				scen_pairwise_forces.append(struct.Pairwise_Force(pf[0], pf[1], pf[2]))
 
-			scenario = struct.Scenario(name, scen_pucks, scen_surfaces, scen_global_forces, scen_pairwise_forces, [])
+			scenario = struct.Scenario(name, scen_pucks, scen_surfaces, scen_global_forces, scen_pairwise_forces, observed_path)
 			scenarios.append(scenario)
-
+			# for p in scenario.pucks:
+			# 	print("mass",p.mass)
+			# 	print("color",p.color)
+			# 	print("postition",p.position)
+			# 	print("elastic",p.elastic)
+			# 	print("size",p.size)
+			# 	print("velocity",p.velocity)
+			break
+		break
 	return(scenarios)
 
-create_scenarios('C:/Users/hanna/Dropbox (MIT)/6.804_final/ullman-physics2015/saved-worlds/')
+# Hannah:
+# create_scenarios('C:/Users/hanna/Dropbox (MIT)/6.804_final/ullman-physics2015/saved-worlds/')
+
+# Andrea:
+# create_scenarios('/Users/andreabolivar/Desktop/6.804/6.804_final/ullman-physics2015/saved-worlds')

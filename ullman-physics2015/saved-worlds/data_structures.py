@@ -9,6 +9,9 @@ class Puck:
 		self.position = (x, y)
 		self.velocity = (v_x, v_y)
 
+	def update_pos(self,new_x,new_y):
+		self.position = (new_x, new_y)
+
 
 class Surface:
 	def __init__(self, upperleft, lowerright, friction, color):
