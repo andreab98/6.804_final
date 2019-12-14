@@ -1,0 +1,115 @@
+NOTES
+
+* a physics world is defined in 'worlds.ss', including object masses, types,
+force-fields, global forces, etc. The particular world defined here is 
+pushed as the 'real-world' to physics-main.
+
+* physics-main.ss at the moment only generates the observed-path in a 
+forward direction from some randomly selected initial conditions. It 
+saves the output (real-world q0 v0 observed-path) into a file in the
+worlds/ directory. The observed-path along with data for python display
+is saved in a pythonphysics/stimuli directory.
+
+* actual inference is run in 'run-inference.ss' which loads a world
+from the worlds directory, along with initial conditions and the actual
+path. This is then handed to a loop which goes over all the parameters
+to be inferred, and all combinations of these parameters. 
+
+* At the moment, the particles do take into account the fact that if there
+are objects of the same color then they should have the same mass.
+
+TODO - make this the case for particle field-parameters and goo-strength.
+
+* For each parameter setting simulate-and-score function creates an 
+artificial world with settings that match the real world in terms of 
+color, goo location, initial parameters and other observables. The hidden
+parameters are passed in through a loop. The output is a score calculated
+by comparing the simulated path to the real one.
+
+* TODO make the output of the simulated a bit more readable for python, 
+and take into account the fact that we're inferring over a whole lot of
+things -> masses, field-parameters, fields, goo-strength, global-forces.
+
+
+Actual worlds used:
+------------------
+fieldless-combination: small-yellow, medium-red, heavy-blue
+
+particle-combination1: small-blue- medium-yellow0 large-red+
+particle-combination2: small-red0 medium-blue+ large-yellow-
+particle-combination3: small-yellow+ medium-red- large-blue0
+
+goo-combination1: smooth-magenta weak-brown strong-green
+goo-combination2: smooth-green weak-magenta strong-brown
+goo-combination3: smooth-brown weak-green strong-magenta
+
+World 1 - Base
+-------
+Globals: None
+Particles: Fieldless-combination
+Fields: Doesn't matter
+Goos: goo-combination1
+
+World 2 - Likes attract
+-------
+Globals: None
+Particles: particle-combination1
+Fields: (+ + attract), (- - attract), (+ - no-interaction)
+Goos: goo-combination2
+
+World 3 - Likes attract, opposites repel
+-------
+Globals: None
+Particles: particle-combination2
+Fields: (+ + attract), (- - attract), (+ - repel)
+Goos: goo-combination3
+
+World 4 - Opposites attract
+-------
+Globals: None
+Particles: particle-combination3
+Fields: (+ + repel), (- - repel), (+ - attract)
+Goos: goo-combination1
+
+World 5 - Opposites attract, likes repel
+-------
+Globals: None
+Particles: particle-combination1
+Fields: (+ + repel), (- - repel), (+ - attract)
+Goos: goo-combination1
+
+World 6 - 'Magnetism': + + attract, + - attract
+-------
+Globals: None
+Particles: particle-combination2
+Fields: (+ + attract), (+ - attract)
+Goos: goo-combination2
+
+World 7 - Likes attract, Left global
+-------
+Globals: Left
+Particles: particle-combination2
+Fields: (+ + attract), (- - attract), (+ - no-interaction)
+Goos: goo-combination2
+
+World 8 - Likes attract, oppposites repel, right global
+-------
+Globals: Right
+Particles: particle-combination3
+Fields: (+ + attract), (- - attract), (+ - no-interaction)
+Goos: goo-combination3
+
+World 9 - Opposites attract, likes repel, down global
+-------
+Globals: Down
+Particles: particle-combination1
+Fields: (+ + repel), (- - repel), (+ - attract)
+Goos: goo-combination3
+
+World 10 - 'Magnetism': + + attract, + - attract, global up
+-------
+Globals: Up
+Particles: particle-combination3
+Fields: (+ + attract), (+ - attract)
+Goos: goo-combination1
+
