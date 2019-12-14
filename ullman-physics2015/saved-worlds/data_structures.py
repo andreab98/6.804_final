@@ -8,9 +8,28 @@ class Puck:
 		self.field_strength	= field_strength
 		self.position = (x, y)
 		self.velocity = (v_x, v_y)
+		self.positions  = [(x, y)]
+		self.velocities = []
 
 	def update_pos(self,new_x,new_y):
+		# self.velocities.append()
 		self.position = (new_x, new_y)
+		self.positions.append((new_x, new_y))
+
+	def get_averg_pos(self):
+		sum_x, sum_y = 0, 0
+		l = len(self.positions)
+
+		for x, y in self.positions:
+			sum_x += x
+			sum_y += y
+
+		return (sum_x/l, sum_y/l)
+
+	def total_change(self):
+		x_delta = self.positions[-1][0]-self.positions[0][0]
+		y_delta = self.positions[-1][1]-self.positions[0][1]
+		return (x_delta, y_delta)
 
 
 class Surface:
