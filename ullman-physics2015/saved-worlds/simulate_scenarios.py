@@ -11,7 +11,7 @@ scenarios_list = create_scenarios('/Users/andreabolivar/Desktop/6.804/6.804_fina
 ######### Average position along the y-axis
 ######### Total change along the y-axis
 ######### Average pairwise distance between particles
-# Total change in pairwise distance
+######### Total change in pairwise distance
 # Velocity loss while on surfaces
 # Rest time on surfaces
 # Average velocity
@@ -57,16 +57,13 @@ for s in scenarios_list:
                                     curr_positions[i][1])
 
     # after all paths get stats on each puck
+    print("Average pairwise distance between particles", physics.average_dist(pucks))
+    print("Total change in pairwise distance", physics.total_pairwise_dist(pucks))
     for puck1 in pucks:
         print(puck1.color)
         print("average  diff", puck1.get_averg_pos())
         print("total change", puck1.total_change())
-        print('\n')
-
         # Average pairwise distance between particles
-        for puck2 in pucks:
-            print(puck1.color, puck2.color)
-            print(physics.average_dist(puck1, puck2))
-            print('\n')
+        print('\n')
 
     break
