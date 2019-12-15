@@ -42,9 +42,6 @@ def collision(obj1, obj2):
 
     # check for puck to puck and surface collision
     if type(obj1) == struct.Puck and type(obj2) == struct.Surface:
-        print(obj1.position)
-        print(obj2.upperleft)
-        print(obj2.lowerright)
         ul_x, ul_y = obj2.upperleft
         lr_x, lr_y = obj2.lowerright
 

@@ -9,16 +9,27 @@ class Puck:
 		self.position = (x, y)
 		self.velocity = (v_x, v_y)
 		self.positions  = [(x, y)]
-		self.velocities = []
+		self.velocities = [(v_x, v_y)]
 
 	def update_pos(self,new_x,new_y):
 		self.position = (new_x, new_y)
 		self.positions.append((new_x, new_y))
 
-	def get_averg_pos(self):
+	def update_v(self,new_vx,new_vy):
+		self.velocity = (new_vx, new_vy)
+		self.velocities.append((new_vx, new_vy))
+
+	def get_average_v(self):
+		sum_vx, sum_vy = 0, 0
+		l = len(self.velocities)
+		for vx, vy in self.velocities:
+			sum_vx += vx
+			sum_vy += vy
+
+		return (sum_vx/l, sum_vy/l)
+	def get_average_pos(self):
 		sum_x, sum_y = 0, 0
 		l = len(self.positions)
-
 		for x, y in self.positions:
 			sum_x += x
 			sum_y += y
