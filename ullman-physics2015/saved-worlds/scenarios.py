@@ -23,7 +23,7 @@ def create_scenarios(folderpath):
 
 	# print(paths)
 	for file in paths:
-		print(file)
+		# print(file)
 
 		all_lines = open(file, 'r').readlines()
 
@@ -131,8 +131,8 @@ def create_scenarios(folderpath):
 			# 	print("elastic",p.elastic)
 			# 	print("size",p.size)
 			# 	print("velocity",p.velocity)
-			break
-		break
+		# 	break
+		# break
 	return scenarios
 #
 # # Hannah:
