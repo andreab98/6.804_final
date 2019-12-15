@@ -133,7 +133,7 @@ def create_scenarios(folderpath):
 			# 	print("velocity",p.velocity)
 			# break
 		# break
-	return(scenarios)
+	return scenarios
 
 # Hannah:
 scenarios = create_scenarios('C:/Users/hanna/Dropbox (MIT)/6.804_final/ullman-physics2015/saved-worlds/')
