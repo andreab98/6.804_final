@@ -44,6 +44,7 @@ for s in scenarios_list:
     # print(s.name)
     observed_path = s.path
     pucks = s.pucks
+    surfaces = s.surfaces
     # print(len(pucks))
 
     # iterate through all paths to update scenario
@@ -56,16 +57,17 @@ for s in scenarios_list:
             # update new locations of pucks
             new_x, new_y = positions[i]
             pucks[i].update_pos(new_x, new_y)
+            # for p in pucks:
+            #     for surf in surfaces:
+            #         if (physics.collision(p,surf)):
+            #                         print("FOUNDDDDD")
 
     # after all paths get stats on each puck
     print("Average pairwise distance between particles", physics.average_dist(pucks))
     print("Total change in pairwise distance", physics.total_pairwise_dist(pucks))
-    # print(physics.collision(pucks[0],pucks[1]))
     for puck1 in pucks:
         print(puck1.color)
         print("average  diff", puck1.get_averg_pos())
         print("total change", puck1.total_change())
-        # # Average pairwise distance between particles
-        # print('\n')
-
-    break
+        # Average pairwise distance between particles
+        print('\n')

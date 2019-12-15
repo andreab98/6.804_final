@@ -33,37 +33,40 @@ def total_pairwise_dist(pucks):
 
     return sum_average/6
 
-# def collision(obj1, obj2):
-#     # check for puck to puck collision
-#     if type(obj1) == struct.puck and type(obj2) == struct.puck:
-#         dist  = ((obj1.position[0]-obj2.position[0])**2+
-#                     (obj1.position[1]-obj2.position[1])**2)**.5
-#         return (-1e-9 < (dist - (obj1.size + obj2.size)) < 1e-9)
-#
-#     # check for puck to puck and surface collision
-#     if type(obj1) == struct.puck and type(obj2) == struct.surface:
-#         ul_x, ul_y = obj2.upperleft
-#         lr_x, lr_y = obj2.lowerright
-#
-#         x, y = obj1.position
-#
-#         return ((x+obj1.size)>ul_x) or
-#             ((x-obj1.size)<lr_x) or
-#             ((y+obj1.size)>lr_y) or
-#             ((y-obj1.size)<ul_y)
-#
-#     if type(obj2) == struct.puck and type(obj1) == struct.surface:
-#         ul_x, ul_y = obj1.upperleft
-#         lr_x, lr_y = obj1.lowerright
-#
-#         x, y = obj2.position
-#
-#         return ((x+obj2.size)>ul_x) or
-#             ((x-obj2.size)<lr_x) or
-#             ((y+obj2.size)>lr_y) or
-#             ((y-obj2.size)<ul_y)
-#
-#     return False
+def collision(obj1, obj2):
+    # check for puck to puck collision
+    if type(obj1) == struct.Puck and type(obj2) == struct.Puck:
+        dist  = ((obj1.position[0]-obj2.position[0])**2+
+                    (obj1.position[1]-obj2.position[1])**2)**.5
+        return dist < (obj1.size+obj2.size)
+
+    # check for puck to puck and surface collision
+    if type(obj1) == struct.Puck and type(obj2) == struct.Surface:
+        print(obj1.position)
+        print(obj2.upperleft)
+        print(obj2.lowerright)
+        ul_x, ul_y = obj2.upperleft
+        lr_x, lr_y = obj2.lowerright
+
+        x, y = obj1.position
+
+        return (((x+obj1.size)>ul_x) or
+            ((x-obj1.size)<lr_x) or
+            ((y+obj1.size)>lr_y) or
+            ((y-obj1.size)<ul_y))
+
+    if type(obj2) == struct.Puck and type(obj1) == struct.Surface:
+        ul_x, ul_y = obj1.upperleft
+        lr_x, lr_y = obj1.lowerright
+
+        x, y = obj2.position
+
+        return (((x+obj2.size)>ul_x) or
+            ((x-obj2.size)<lr_x) or
+            ((y+obj2.size)>lr_y) or
+            ((y-obj2.size)<ul_y))
+
+    return False
 
 #######HELP WITH THIS FUNCTION########
 # def compute_angle(puck1, puck2, time_index):
