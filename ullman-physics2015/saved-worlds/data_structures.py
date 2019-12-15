@@ -12,7 +12,6 @@ class Puck:
 		self.velocities = []
 
 	def update_pos(self,new_x,new_y):
-		# self.velocities.append()
 		self.position = (new_x, new_y)
 		self.positions.append((new_x, new_y))
 
