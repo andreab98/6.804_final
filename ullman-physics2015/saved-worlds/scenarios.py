@@ -16,10 +16,10 @@ def create_scenarios(folderpath):
 	full_paths = glob.glob(folderpath + '/*.txt')
 	# print(full_paths)
 	# Hannah:
-	# paths = [x[73:] for x in full_paths]
+	paths = [x[73:] for x in full_paths]
 
 	# Andrea:
-	paths = [x[79:] for x in full_paths]
+	# paths = [x[79:] for x in full_paths]
 
 	# print(paths)
 	for file in paths:
@@ -131,12 +131,12 @@ def create_scenarios(folderpath):
 			# 	print("elastic",p.elastic)
 			# 	print("size",p.size)
 			# 	print("velocity",p.velocity)
-			break
-		break
-	return(scenarios)
+			# break
+		# break
+	return scenarios
 
 # Hannah:
-# create_scenarios('C:/Users/hanna/Dropbox (MIT)/6.804_final/ullman-physics2015/saved-worlds/')
+scenarios = create_scenarios('C:/Users/hanna/Dropbox (MIT)/6.804_final/ullman-physics2015/saved-worlds/')
 
 # Andrea:
-# create_scenarios('/Users/andreabolivar/Desktop/6.804/6.804_final/ullman-physics2015/saved-worlds')
+# scenarios = create_scenarios('/Users/andreabolivar/Desktop/6.804/6.804_final/ullman-physics2015/saved-worlds')
