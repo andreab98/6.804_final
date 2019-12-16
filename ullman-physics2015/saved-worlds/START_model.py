@@ -1,5 +1,5 @@
 import scenarios as scen
-# import SSS_model as sss
+import SSS_model as sss
 import random
 
 def start_model(obs_path, scenario_id):
