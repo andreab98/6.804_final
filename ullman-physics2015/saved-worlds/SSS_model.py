@@ -122,22 +122,25 @@ def sss_model(test_s, scenario_id):
 
 
 # TESTING
-w2s1 = scen.scenarios[1]
-print(w2s1.name)
+num_correct = 0
 
-print(sss_model(w2s1, 1))
-print("\n")
-print(sss_model(w2s1, 2))
-print("\n")
+for test_s in scen.scenarios:
+    results = {}
+    print("test scenario: ", test_s.name)
+    for i in range(6):
+        r = sss_model(test_s, i+1)
+        if r in results:
+            results[r] += 1
+        else:
+            results[r] = 1
+    max_num = 0
+    correct_w = ""
+    for w in results:
+        if results[w]>max_num:
+            correct_w = w
 
-print(sss_model(w2s1, 3))
-print("\n")
-
-print(sss_model(w2s1, 4))
-print("\n")
-
-print(sss_model(w2s1, 5))
-print("\n")
-
-print(sss_model(w2s1, 6))
-print("\n")
+    if correct_w == test_s.name.split('_')[0]:
+        num_correct += 1
+        
+print(num_correct)
+print(num_correct/len(scen.scenarios))
