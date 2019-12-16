@@ -100,15 +100,15 @@ def scenario_stats(s):
     # print("Velocity loss while on surfaces")
     for k in collision_velocities.keys():
         if k not in velocity_loss:
-            velocity_loss[k] = [(collision_velocities[k][-1][0] -
+            velocity_loss[k] = (collision_velocities[k][-1][0] -
                             collision_velocities[k][0][0],
                             collision_velocities[k][-1][1] -
-                            collision_velocities[k][0][1])]
-        else:
-            velocity_loss[k].append((collision_velocities[k][-1][0] -
-                            collision_velocities[k][0][0],
-                            collision_velocities[k][-1][1] -
-                            collision_velocities[k][0][1]))
+                            collision_velocities[k][0][1])
+        # else:
+        #     velocity_loss[k].append((collision_velocities[k][-1][0] -
+        #                     collision_velocities[k][0][0],
+        #                     collision_velocities[k][-1][1] -
+        #                     collision_velocities[k][0][1]))
         # print("x ", collision_velocities[k][-1][0] - collision_velocities[k][0][0])
         # print("y ", collision_velocities[k][-1][1] - collision_velocities[k][0][1])
 

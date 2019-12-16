@@ -15,10 +15,6 @@ def sss_model(test_s, scenario_id):
 
     # test summary stats
     test_stats = scenario_stats(test_s)
-    # print(test_stats.keys())
-    # ict_keys(['pre_post', 'rest_time_surf',
-    # 'velocity_loss', 'dist_average', 'total_change',
-    # 'av_position', 'av_velocity'])
 
     worlds = list(poss_worlds.keys())
     # check each summary statistics for  each world
@@ -37,6 +33,7 @@ def sss_model(test_s, scenario_id):
 
     w_guess[dist_average[1]]+=1
     w_guess[total_change[1]]+=1
+
 
     for color in ['yellow','blue','red']:
         min_vel = (10000000,0)
@@ -79,30 +76,57 @@ def sss_model(test_s, scenario_id):
         w_guess[min_t[1]]+=1
 
         for color2 in ['yellow','blue','red']:
-            
-        for surfaces in ['brown', 'darkmagenta', 'yellowgreen']:
-            for name in poss_worlds:
-                # total_change
-                test = test_stats['total_change']
-                actual = poss_worlds[name]['total_change']
+            if ((color,color2) in test_stats["total_change_pucks"] and
+                (color,color2) in poss_worlds[worlds[i]]["total_change_pucks"]):
+                min_t = (10000000000,0)
+                for i in range(len(worlds)):
+                    p1_test = test_stats["total_change_pucks"][(color,color2)][0]
+                    p2_test = test_stats["total_change_pucks"][(color,color2)][1]
+                    p1_actual = poss_worlds[worlds[i]]["total_change_pucks"][(color,color2)][0]
+                    p2_actual = poss_worlds[worlds[i]]["total_change_pucks"][(color,color2)][1]
+                    p1_x_diff = abs(p1_test[0] - p1_actual[0])
+                    p1_y_diff = abs(p1_test[1] - p1_actual[1])
+                    p2_x_diff = abs(p2_test[0] - p2_actual[0])
+                    p2_y_diff = abs(p2_test[1] - p2_actual[1])
+                    if (p1_x_diff+p1_y_diff+p2_x_diff+p2_y_diff)<min_t[0]:
+                        min_t = (p1_x_diff+p1_y_diff+p2_x_diff+p2_y_diff,i)
+                w_guess[min_t[1]]+=1
 
-            stats["pre_post"] = pre_post_collision
+        for surf in ['brown', 'darkmagenta', 'yellowgreen']:
+            min_t = (10000000000,None)
+            min_v = (10000000000,None)
+            for i in range(len(worlds)):
+                if ((color, surf) in test_stats["rest_time_surf"] and
+                    (color, surf) in poss_worlds[worlds[i]]["rest_time_surf"]):
+                    test = test_stats["rest_time_surf"][(color,surf)]
+                    actual = poss_worlds[worlds[i]]["rest_time_surf"][(color,surf)]
+                    if abs(test-actual)<min_t[0]:
+                        min_t = (abs(test-actual),i)
 
-            stats["rest_time_surf"] = collision_times
-                stats["velocity_loss"]
+                if ((color, surf) in test_stats["velocity_loss"] and
+                    (color, surf) in poss_worlds[worlds[i]]["velocity_loss"]):
+                    test = test_stats["velocity_loss"][(color,surf)]
+                    actual= poss_worlds[worlds[i]]["velocity_loss"][(color,surf)]
+                    # actual_y = poss_worlds[worlds[i]]["velocity_loss"][(color,surf)][1]
+                    diff_x = test[0] - actual[0]
+                    diff_y = test[1] - actual[1]
+                    if (abs(diff_x)+abs(diff_y))<min_v[0]:
+                        min_v = (abs(diff_x)+abs(diff_y),i)
 
+            if min_t[1]:
+                w_guess[min_t[1]] += 1
+            if min_v[1]:
+                w_guess[min_v[1]] += 1
 
-        print(actual)
-        average position
-
-    print(w_guess)
-
-    return
+    return worlds[w_guess.index(max(w_guess))]
 
 
 # TESTING
-w2s1 = scen.scenarios[0]
+w2s1 = scen.scenarios[1]
 print(w2s1.name)
+
+print(sss_model(w2s1, 1))
+print("\n")
 print(sss_model(w2s1, 2))
 print("\n")
 
