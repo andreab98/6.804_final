@@ -9,7 +9,7 @@ def io_model(obs_path, scenario_id):
 			name = s.name.split('_')[0]
 			path = [p[0] for p in s.path]
 			poss_worlds[name] = path
-	
+
 	for name, path in poss_worlds.items():
 		world_id = int(name.split('d')[1])
 		world_diff = 0

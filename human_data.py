@@ -394,9 +394,13 @@ data_points = [data_amy, data_tiff, data_jenna, data_kriti]
 worlds = {}
 for dp in data_points:
 	for data in dp["data"]:
-		if data["curWorld"] in worlds:
-			worlds[data["curWorld"]].append(data["curVideo"])
-		else:
-			worlds[data["curWorld"]] = [data["curVideo"]]
-
-print(worlds)
+		for k in list(data.keys()):
+			if k not in worlds:
+				worlds[k] = [data[k]]
+			else:
+				worlds[k].append(data[k])
+for w in worlds:
+	print(w)
+	for val in worlds[w]:
+		print(val)
+	print("\n")
