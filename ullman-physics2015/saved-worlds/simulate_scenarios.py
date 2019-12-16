@@ -15,28 +15,7 @@ scenarios_list = create_scenarios('/Users/andreabolivar/Desktop/6.804/6.804_fina
 #8####### Rest time on surfaces
 #9####### Average velocity
 #10###### Pre- and post-collision velocity ratio
-
 # Change in angle following collision
-        # ;; get angle theta between 2 2D particles
-        # (define (compute-angle particle1 particle2)
-        # (let* ((x1 (first particle1))
-        #        (x2 (first particle2))
-        #        (y1 (second particle1))
-        #        (y2 (second particle2))
-        #        (rx (- x2 x1))
-        #        (ry (- y2 y1))
-        #        (default (atan (/ ry rx))))
-        #   (if (> rx 0)
-        #       (atan (/ ry rx))
-        #       (if (and (< rx 0) (>= ry 0))
-        #           (+ (atan (/ ry rx)) pi)
-        #           (if (and (< rx 0) (< ry 0))
-        #               (- (atan (/ ry rx)) pi)
-        #               (if (and (= rx 0) (> ry 0))
-        #                   (/ pi 2)
-        #                   (if (and (= rx 0) (< ry 0))
-        #                       (/ pi -2)
-        #                       0.0)))))))
 
 def scenario_stats(s):
     stats = {}

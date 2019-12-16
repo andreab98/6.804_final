@@ -39,6 +39,7 @@ def sss_model(test_s, scenario_id):
         min_vel = (10000000,0)
         min_pos = (10000000,0)
         min_t = (10000000,0)
+
         for i in range(len(worlds)):
             if (color in test_stats['av_velocity'] and
                 color in poss_worlds[worlds[i]]['av_velocity']):
@@ -71,9 +72,9 @@ def sss_model(test_s, scenario_id):
                 if (abs(diff_x)+abs(diff_y))<min_t[0]:
                     min_t = (abs(diff_x)+abs(diff_y),i)
 
-        w_guess[min_vel[1]]+=1
-        w_guess[min_pos[1]]+=1
-        w_guess[min_t[1]]+=1
+        w_guess[min_vel[1]]+=2
+        w_guess[min_pos[1]]+=2
+        w_guess[min_t[1]]+=2
 
         for color2 in ['yellow','blue','red']:
             if ((color,color2) in test_stats["total_change_pucks"] and
@@ -117,22 +118,30 @@ def sss_model(test_s, scenario_id):
                 w_guess[min_t[1]] += 1
             if min_v[1]:
                 w_guess[min_v[1]] += 1
-
-    return worlds[w_guess.index(max(w_guess))]
+    # print(w_guess)
+    # print(worlds)
+    max_val = max(w_guess)
+    final_guess = []
+    for val in range(len(w_guess)):
+        if w_guess[val] == max_val:
+            final_guess.append(worlds[val])
+    return final_guess
 
 
 # TESTING
 num_correct = 0
-
 for test_s in scen.scenarios:
     results = {}
+    curr = test_s.name.split('_')[1]
     print("test scenario: ", test_s.name)
     for i in range(6):
-        r = sss_model(test_s, i+1)
-        if r in results:
-            results[r] += 1
-        else:
-            results[r] = 1
+        if i != curr:
+            r = sss_model(test_s, i+1)
+            for w in r:
+                if w in results:
+                    results[w] += 1
+                else:
+                    results[w] = 1
     max_num = 0
     correct_w = ""
     for w in results:
@@ -141,6 +150,6 @@ for test_s in scen.scenarios:
 
     if correct_w == test_s.name.split('_')[0]:
         num_correct += 1
-        
+    print("correct: ", (correct_w == test_s.name.split('_')[0]))
+
 print(num_correct)
-print(num_correct/len(scen.scenarios))
