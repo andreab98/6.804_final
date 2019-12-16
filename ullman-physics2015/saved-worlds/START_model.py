@@ -6,7 +6,15 @@ def start_model(obs_path, scenario_id):
 	initial = scen.scenarios[16]
 	# initial = sss.sss_model(obs_path, scenario_id)
 	# for i in range(50):
-	initial_diff
+	path = list(poss_worlds.items())[random.randint(0, len(poss_worlds))]
+	world_id = int(name.split('d')[1])
+	world_diff = 0
+
+	for i in range(len(path)):
+		for j in range(4):
+			simulated_x, simulated_y = path[i][j]
+			observed_x, observed_y = obs_path[i][j]
+			initial_diff += ((simulated_x-observed_x)**2 + (simulated_y-observed_y)**2)**0.5
 
 	poss_worlds = {}
 	# diff = {}

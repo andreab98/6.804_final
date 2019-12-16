@@ -42,9 +42,6 @@ def collision(obj1, obj2):
 
     # check for puck to puck and surface collision
     if type(obj1) == struct.Puck and type(obj2) == struct.Surface:
-        print(obj1.position)
-        print(obj2.upperleft)
-        print(obj2.lowerright)
         ul_x, ul_y = obj2.upperleft
         lr_x, lr_y = obj2.lowerright
 
@@ -67,22 +64,3 @@ def collision(obj1, obj2):
             ((y-obj2.size)<ul_y))
 
     return False
-
-#######HELP WITH THIS FUNCTION########
-# def compute_angle(puck1, puck2, time_index):
-#         x1, y1 = puck1.positions[time_index]
-#         x2, y2 = puck1.positions[time_index]
-#         rx = x2-x1
-#         ry = y2-y2
-#
-#         if rx > 0:
-#             math.atan2(ry, rx)
-#             if rx < 0 and ry>=0:
-#                 math.atan2(ry, rx) + math.pi
-#                 if rx<0 and ry>0:
-#                     math.atan2(ry, rx) - math.pi
-#                     if rx == 0 and ry>0:
-#                         pi/2
-#                         if rx==0 and ry>0:
-#                             pi/(-2)
-#         return math.atan2(ry, rx)
